@@ -1,0 +1,257 @@
+body{
+    margin:0;
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height:1.428571429;
+    font-size:14px;
+    color:#222
+}
+#theForm{
+    width:100%;
+    display:flex;
+    height: 90vh;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+}
+#theForm select:focus{
+    background-color:#fefbed
+}
+#theForm label{
+    float:right;
+    margin-right:30px
+}
+#theForm button{
+    display:inline-block;
+    margin-bottom:0;
+    font-weight:normal;
+    text-align:center;
+    vertical-align:middle;
+    cursor:pointer;
+    background-image:none;
+    border:1px solid #d2d2d2;
+    white-space:nowrap;
+    padding:6px 12px;
+    font-size:14px;
+    line-height:1.428571429;
+    border-radius:0;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    color:#425360;
+    background-color:#d8d8d8
+}
+#theForm button:hover,#theForm button:focus{
+    color:#425360;
+    text-decoration:none
+}
+#theForm button#completeButton{
+    background-color:#000;
+    color:#fff;
+    margin-left:5px;
+    border-color:#000
+}
+#theForm button#completeButton:hover{
+    background-color:#4d4d4d;
+    border-color:#4d4d4d
+}
+#theForm input[type="text"],#theForm input[type="tel"],#theForm select{
+    background-image:none;
+    border-radius:5px;
+    color:#000;
+    margin:16px 0;
+    outline:1px solid #ccc;
+    padding:8px 4px;
+    width:95%;
+    box-sizing:border-box;
+    transition:all .4s;
+    border:0;
+    -webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,0.29),0 -1px 1px #fff,0 1px 0 #fff;
+    box-shadow:inset 0 1px 2px rgba(0,0,0,0.29),0 -1px 1px #fff,0 1px 0 #fff
+}
+#theForm input[type="text"]:focus,#theForm input[type="tel"]:focus,#theForm select:focus{
+    box-shadow:none
+}
+#theForm #hpsCountryRow{
+    display:none
+}
+#theForm #hpsAddressIntlSection,#theForm #hpsCardSection{
+    flex-basis:100%;
+    flex:1
+}
+#hpsCardSection{
+  display:flex;
+  height: 50vh;
+  flex-direction: column;
+}
+#theForm .hpsRow,#theForm .hpsTypeRow,#theForm .hpsExpirationRow,#theForm #hpsNumberRow,#theForm #hpsAddress1Row,#theForm #hpsAddress2Row,#theForm #hpsCityRow,#theForm #hpsStateRow,#theForm #hpsZipRow{
+    margin:0 15px;
+    display:flex; 
+    flex-wrap:wrap;
+    align-items:center;
+    float:none
+}
+#theForm .hpsRow div:nth-of-type(1),#theForm .hpsTypeRow div:nth-of-type(1),#theForm .hpsExpirationRow div:nth-of-type(1),#theForm #hpsNumberRow div:nth-of-type(1),#theForm #hpsAddress1Row div:nth-of-type(1),#theForm #hpsAddress2Row div:nth-of-type(1),#theForm #hpsCityRow div:nth-of-type(1),#theForm #hpsStateRow div:nth-of-type(1),#theForm #hpsZipRow div:nth-of-type(1){
+    flex:1
+}
+#theForm .hpsRow div:nth-of-type(2),#theForm .hpsTypeRow div:nth-of-type(2),#theForm .hpsExpirationRow div:nth-of-type(2),#theForm #hpsNumberRow div:nth-of-type(2),#theForm #hpsAddress1Row div:nth-of-type(2),#theForm #hpsAddress2Row div:nth-of-type(2),#theForm #hpsCityRow div:nth-of-type(2),#theForm #hpsStateRow div:nth-of-type(2),#theForm #hpsZipRow div:nth-of-type(2){
+    flex:2
+}
+#theForm #hpsExpirationRow div:nth-of-type(2){
+    display:flex
+}
+#theForm #expYear,#theForm #expMonth{
+    width:120px
+}
+#theForm #CVV2{
+    width:120px
+}
+#ccType{
+  width: 40%;
+  height: 32px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-botton:10px;
+}
+#theForm #expYear{
+    margin-right:8px
+}
+#theForm .showInlineError{
+    display:inline;
+    flex-basis:100%;
+    position:relative
+}
+#theForm .showInlineError ~ div>input,#theForm .showInlineError ~ div>select{
+    outline:1px solid #d3403a;
+    box-shadow:inset 0 1px 1px rgba(0,0,0,0.8),0 0 6px #e6918d
+}
+#theForm .showInlineError ~ div>input:focus,#theForm .showInlineError ~ div>select:focus{
+    background-color:#fefbed
+}
+#theForm #hpsAmountRow,#theForm .hpsCVV2WhatLink{
+    display:none
+}
+#theForm #hpsButtonRow{
+    flex-basis:100%;
+    bottom:0;
+    margin-right:30px
+}
+#theForm #hpsButtonRow>div{
+    display:flex;
+    flex-direction:row-reverse
+}
+#theForm #numberLabelText:after,#theForm #nameLabelText:after,#theForm #numberLabelText:after,#theForm #CVV2LabelText:after,#theForm #expirationLabelText:after,#theForm #address1Text:after,#theForm #cityText:after,#theForm #stateText:after,#theForm #zipText:after,#theForm #countryText:after,#theForm #hpsTypeLabel label:after{
+    content:" *";
+    color:red
+}
+#theForm #CVV2LabelText,#theForm #stateText,#theForm #zipText{
+    visibility:hidden;
+    position:relative
+}
+#theForm #CVV2LabelText:before,#theForm #stateText:before,#theForm #zipText:before{
+    visibility:visible;
+    position:absolute;
+    top:0;
+    right:0
+}
+#theForm #CVV2LabelText:before{
+    content:"CVV Number"
+}
+#theForm #stateText:before{
+    content:"State"
+}
+#theForm #zipText:before{
+    content:"Zip Code"
+}
+#theForm #hpsAddress2Text:before{
+    content:"Address 2"
+}
+#theForm #postStateText:after,#theForm #postCVV2LabelText:after,#theForm #postZipText:after{
+    content:" *";
+    color:red
+}
+#hpsNameField{
+  margin-top:10px;
+  width:"40%";
+  height: 32px;
+}
+
+#theForm #errorBelowName:after,#theForm #errorBelowNumber:after,#theForm #errorBelowCCType:after,#theForm #errorBelowCVV:after,#theForm #errorBelowExpiration:after,#theForm #errorBelowAddress1:after,#theForm #errorBelowCity:after,#theForm #errorBelowState:after,#theForm #errorBelowZip:after,#theForm #errorBelowCountry:after{
+    left:33.3%;
+    position:relative;
+    top:-11px;
+    color:red;
+    font-size:0.7rem
+}
+#theForm #errorBelowName:after{
+    content:"Enter full name on card"
+}
+#theForm #errorBelowCCType:after{
+    content:"Invalid credit card type"
+}
+#theForm #errorBelowNumber:after{
+    content:"Invalid credit card number"
+}
+#theForm #errorBelowCVV:after{
+    content:"Enter valid CVV"
+}
+#theForm #errorBelowExpiration:after{
+    content:"Enter valid expiration date"
+}
+#theForm #errorBelowAddress1:after{
+    content:"Enter valid address"
+}
+#theForm #errorBelowCity:after{
+    content:"Enter city"
+}
+#theForm #errorBelowState:after{
+    content:"Select State"
+}
+#theForm #errorBelowZip:after{
+    content:"Enter a valid ZIP code"
+}
+#theForm #errorBelowCountry:after{
+    content:"Country is missing"
+}
+#completeButtonText{
+    display:none
+}
+#postCompleteButton:after{
+    content:'Save Payment Method Selection'
+}
+@media (max-width: 1305px){
+    #theForm label{
+        margin-right:20px;
+        text-align:right
+    }
+}
+@media (max-width: 931px){
+    #theForm label{
+        width:75px
+    }
+    #theForm #hpsExpirationRow div:nth-of-type(2){
+        flex-direction:column
+    }
+    #theForm #expYear,#theForm #expMonth{
+        margin:6px 0
+    }
+}
+@media (max-width: 707px){
+    #theForm{
+        display:block
+    }
+    #theForm label{
+        width:auto
+    }
+    #theForm #hpsButtonRow{
+        margin-right:37px
+    }
+    #theForm button#completeButton,#theForm button#cancelButton{
+        flex:1
+    }
+    #theForm #hpsButtonRow{
+        width:100%
+    }
+}
